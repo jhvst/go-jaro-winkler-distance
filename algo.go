@@ -19,7 +19,6 @@ func order(s1, s2 string) (string, string) {
 
 // Calculates Jaro-Winkler distance of two strings. The function lowercases and sorts the parameters
 // so that that the longest string is evaluated against the shorter one.
-
 func Calculate(s1, s2 string) float64 {
 
 	s1, s2 = order(strings.ToLower(s1), strings.ToLower(s2))
