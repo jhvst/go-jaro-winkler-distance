@@ -5,7 +5,7 @@ import (
 	"github.com/9uuso/go-jaro-winkler-distance"
 )
 
-func main() {
+func Example() {
 	res := jwd.Calculate("DIXON", "DICKSONX")
 	fmt.Println(res)
 }
