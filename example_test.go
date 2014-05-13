@@ -1,4 +1,4 @@
-package main
+package jwd_test
 
 import (
 	"fmt"
