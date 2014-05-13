@@ -19,7 +19,6 @@ func order(s1, s2 string) (string, string) {
 
 // Calculates Jaro-Winkler distance of two strings. The function lowercases and sorts the parameters
 // so that that the longest string is evaluated against the shorter one.
-// Example:
 //
 // 		package main
 //
