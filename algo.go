@@ -15,6 +15,7 @@ func order(s1, s2 string) (string, string) {
 	} else {
 		return s2, s1
 	}
+
 }
 
 // Calculates Jaro-Winkler distance of two strings. The function lowercases and sorts the parameters
@@ -22,6 +23,11 @@ func order(s1, s2 string) (string, string) {
 func Calculate(s1, s2 string) float64 {
 
 	s1, s2 = order(strings.ToLower(s1), strings.ToLower(s2))
+
+	// This avoids the function to return NaN.
+	if strings.Count(s1, "") == 1 || strings.Count(s2, "") == 1 {
+		return float64(0)
+	}
 
 	// m as `matching characters`
 	// t as `transposition`
@@ -41,8 +47,6 @@ func Calculate(s1, s2 string) float64 {
 		// exact match
 		if s1[i] == s2[i] {
 			m++
-			// Jaro-Winkler l as: `the length of common prefix at the start of the string up to a maximum of 4 characters`
-			// Not relevant in Jaro distance.
 			if i == l && i < 4 {
 				l++
 			}
@@ -54,8 +58,8 @@ func Calculate(s1, s2 string) float64 {
 				if gap < int(window) {
 					m++
 					// Somewhere in here is an error, which causes slight (max 0.04 from what I've come across, compared
-					// with http://www.csun.edu/english/edit_distance.php) variations in some answers (such as slight
-					// variation of Wikipedia example dicksonx and dixonsdsgese).
+					// with http://www.csun.edu/english/edit_distance.php) variations in some answers (for example:
+					// dicksonx and dixonsdsgese).
 					// As far as I understood, transposition is only count when character exists in the string and in
 					// reach of window. This loop checks whether the end of the `s2` string contains characters which
 					// exist in `s1` string.
