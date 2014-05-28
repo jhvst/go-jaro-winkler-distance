@@ -12,13 +12,11 @@ import (
 func order(s1, s2 string) (string, string) {
 	if strings.Count(s1, "")-1 <= strings.Count(s2, "")-1 {
 		return s1, s2
-	} else {
-		return s2, s1
 	}
-
+	return s2, s1
 }
 
-// Calculates Jaro-Winkler distance of two strings. The function lowercases and sorts the parameters
+// Calculate calculates Jaro-Winkler distance of two strings. The function lowercases and sorts the parameters
 // so that that the longest string is evaluated against the shorter one.
 func Calculate(s1, s2 string) float64 {
 
