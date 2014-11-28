@@ -4,7 +4,7 @@ import (
 	"math"
 	"strings"
 
-	"github.com/fiam/gounidecode/unidecode"
+	"github.com/9uuso/unidecode"
 )
 
 // According to this tool: http://www.csun.edu/english/edit_distance.php
