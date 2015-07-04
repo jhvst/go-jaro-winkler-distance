@@ -8,5 +8,5 @@ import (
 
 func main() {
 	// See more example strings at http://www.amstat.org/sections/srms/Proceedings/papers/1990_056.pdf
-	fmt.Println(jwd.Calculate("DIXON", "DICKSONX"))
+	fmt.Println(jwd.Calculate("cat", "dog"))
 }
