@@ -1,4 +1,4 @@
-go-jaro-winkler-distance [![GoDoc](https://godoc.org/github.com/9uuso/go-jaro-winkler-distance?status.png)](https://godoc.org/github.com/9uuso/go-jaro-winkler-distance)
+go-jaro-winkler-distance [![Codeship Status for 9uuso/go-jaro-winkler-distance](https://codeship.com/projects/3650d490-0484-0133-f7cd-1a88c4115bd9/status?branch=master)](https://codeship.com/projects/89371) [![GoDoc](https://godoc.org/github.com/9uuso/go-jaro-winkler-distance?status.png)](https://godoc.org/github.com/9uuso/go-jaro-winkler-distance)
 =====
 
 Native [Jaro-Winkler distance](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance) in Go.
