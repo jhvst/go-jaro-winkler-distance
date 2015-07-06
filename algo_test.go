@@ -41,6 +41,25 @@ func TestWindow(t *testing.T) {
 	})
 }
 
+func TestClosestIndex(t *testing.T) {
+
+	Convey("it should return the closest index", t, func() {
+
+		t1 := closestIndex([]rune("eiiiiieii"), 'e', 4)
+		So(t1, ShouldEqual, 6)
+
+		t2 := closestIndex([]rune("dwayne"), 'e', 4)
+		So(t2, ShouldEqual, 5)
+
+		t3 := closestIndex([]rune("dwayne"), 'n', 3)
+		So(t3, ShouldEqual, 4)
+
+		t4 := closestIndex([]rune("sound"), 'n', 2)
+		So(t4, ShouldEqual, 3)
+	})
+
+}
+
 func TestScore(t *testing.T) {
 
 	Convey("testing score with precalculated data", t, func() {
@@ -67,8 +86,10 @@ func TestCalculate(t *testing.T) {
 		So(Calculate("dixon", "dicksonx"), ShouldAlmostEqual, 0.814, variance)
 		So(Calculate("dicksonx", "dixon"), ShouldAlmostEqual, 0.814, variance)
 		So(Calculate("DICKSONX", "DIXON"), ShouldAlmostEqual, 0.814, variance)
-		So(Calculate("martha", "marhta"), ShouldAlmostEqual, 0.922, variance)
+		So(Calculate("martha", "marhta"), ShouldAlmostEqual, 0.961, variance)
 		So(Calculate("'foo", "fizz"), ShouldAlmostEqual, 0.166, variance)
+		So(Calculate("jones", "johnson"), ShouldAlmostEqual, 0.832, variance)
+		So(Calculate("asdfg", "qwerty"), ShouldEqual, 0)
 
 	})
 }
