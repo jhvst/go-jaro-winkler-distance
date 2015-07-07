@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/9uuso/go-jaro-winkler-distance"
 	. "github.com/smartystreets/goconvey/convey"
 )
 
@@ -97,7 +96,7 @@ func TestCalculate(t *testing.T) {
 }
 
 func ExampleCalculate() {
-	distance := jwd.Calculate("jones", "johnson")
+	distance := Calculate("jones", "johnson")
 	fmt.Println(distance)
 	// Output: 0.8323809523809523
 }
