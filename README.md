@@ -1,4 +1,4 @@
-go-jaro-winkler-distance [![Codeship Status for 9uuso/go-jaro-winkler-distance](https://codeship.com/projects/3650d490-0484-0133-f7cd-1a88c4115bd9/status?branch=master)](https://codeship.com/projects/89371) [![GoDoc](https://godoc.org/github.com/9uuso/go-jaro-winkler-distance?status.png)](https://godoc.org/github.com/9uuso/go-jaro-winkler-distance)
+go-jaro-winkler-distance [![Codeship Status for toldjuuso/go-jaro-winkler-distance](https://codeship.com/projects/3650d490-0484-0133-f7cd-1a88c4115bd9/status?branch=master)](https://codeship.com/projects/89371) [![GoDoc](https://godoc.org/github.com/toldjuuso/go-jaro-winkler-distance?status.png)](https://godoc.org/github.com/toldjuuso/go-jaro-winkler-distance)
 =====
 
 Native [Jaro-Winkler distance](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance) in Go.
@@ -14,7 +14,7 @@ For example comparing words `DIXON` and `DICKSONX` gives you score of `0.8133333
 	import (
 		"fmt"
 
-		"github.com/9uuso/go-jaro-winkler-distance"
+		"github.com/toldjuuso/go-jaro-winkler-distance"
 	)
 
 	func main() {
