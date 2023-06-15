@@ -1,3 +1,3 @@
 module github.com/jhvst/go-jaro-winkler-distance
 
-go 1.17
+go 1.19
